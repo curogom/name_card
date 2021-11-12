@@ -21,72 +21,67 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class NameCard extends StatefulWidget {
+class NameCard extends StatelessWidget {
   const NameCard({Key? key}) : super(key: key);
 
-  @override
-  _NameCardState createState() => _NameCardState();
-}
-
-class _NameCardState extends State<NameCard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.indigo,
       body: SafeArea(
-          child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          const CircleAvatar(
-            radius: 100.0,
-            backgroundImage: AssetImage('images/ico_curogom.png'),
-          ),
-          Text(
-            'CuroGom',
-            style: GoogleFonts.lobster(
-                textStyle: TextStyle(
-              color: Colors.indigo.shade50,
-              fontSize: 40.0,
-            )),
-          ),
-          Text(
-            'FLUTTER DEVELOPER',
-            style: GoogleFonts.bebasNeue(
-              textStyle: TextStyle(
-                color: Colors.indigo.shade100,
-                fontSize: 20.0,
-                letterSpacing: 2.5,
-                fontWeight: FontWeight.bold,
-              ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            const CircleAvatar(
+              radius: 100.0,
+              backgroundImage: AssetImage('images/ico_curogom.png'),
             ),
-          ),
-          SizedBox(
-            height: 20.0,
-            width: 300.0,
-            child: Divider(
-              color: Colors.teal.shade100,
-            ),
-          ),
-          Card(
-            margin:
-                const EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-            child: ListTile(
-              leading: const Icon(
-                Icons.phone,
-                color: Colors.indigo,
-              ),
-              title: Text(
-                '010-2906-2852',
-                style: GoogleFonts.ibmPlexMono(
+            Text(
+              'CuroGom',
+              style: GoogleFonts.lobster(
                   textStyle: TextStyle(
-                    color: Colors.indigo.shade900,
-                    fontSize: 24.0,
+                    color: Colors.indigo.shade50,
+                    fontSize: 40.0,
+                  )),
+            ),
+            Text(
+              'FLUTTER DEVELOPER',
+              style: GoogleFonts.bebasNeue(
+                textStyle: TextStyle(
+                  color: Colors.indigo.shade100,
+                  fontSize: 20.0,
+                  letterSpacing: 2.5,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 20.0,
+              width: 300.0,
+              child: Divider(
+                color: Colors.teal.shade100,
+              ),
+            ),
+            Card(
+              margin:
+              const EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+              child: ListTile(
+                leading: const Icon(
+                  Icons.phone,
+                  color: Colors.indigo,
+                ),
+                title: Text(
+                  '010-2906-2852',
+                  style: GoogleFonts.ibmPlexMono(
+                    textStyle: TextStyle(
+                      color: Colors.indigo.shade900,
+                      fontSize: 24.0,
+                    ),
                   ),
                 ),
               ),
             ),
-          ),
-          Card(
+            Card(
               margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
               child: ListTile(
                 leading: const Icon(
@@ -102,9 +97,11 @@ class _NameCardState extends State<NameCard> {
                     ),
                   ),
                 ),
-              ))
-        ],
-      )),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
